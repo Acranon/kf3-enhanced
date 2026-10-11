@@ -1,0 +1,46 @@
+# ---- Game content: never committed --------------------------------------------
+# Everything here is extracted from, or made from, the player's own disc.
+/disc/
+/build/
+/generated/
+/auto/
+/data/
+/tests/saves/
+*.kfstate
+*.kfstate.bak
+# The OCR's glyph templates are cut from the game's font.
+/scripts/research/ocr/*.pkl
+/scripts/research/ocr/tims_*/
+
+# ---- Player files (settings, memory cards, map memory) ---------------------------
+/automap/
+/automap_backup_*/
+/carda.sav
+/cardb.sav
+/enhancements.json
+/interface.ini
+/settings.json
+/mods/
+/packs/
+
+# ---- Logs and test output ----------------------------------------------------------
+*.log
+/tests/logs/
+/tests/shots/
+/tests/run/
+
+# ---- Local working files -------------------------------------------------------------
+/research-archive/
+/NOTES.md
+
+# ---- Build output ----------------------------------------------------------------------
+bin/
+obj/
+__pycache__/
+*.pyc
+.vs/
+.vscode/
+*.user
+
+# ---- Release output ----
+/dist/

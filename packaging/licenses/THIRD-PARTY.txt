@@ -1,0 +1,23 @@
+King's Field III Enhanced carries these third-party components.
+
+kf3-enhanced itself ............ CC0 1.0 (kf3-enhanced-CC0.txt)
+RecompOne (runtime, recompiler)  MIT, flaffy / BlackLabelHQ (RecompOne-MIT.txt)
+Verdite2 launcher and stub ..... MIT, Voicedrew11 (Verdite2-MIT.txt); the launcher
+                                 and stub here are adapted from it
+Noto Sans ...................... SIL OFL 1.1, Google (NotoSans-OFL.txt)
+Font Awesome Free .............. SIL OFL 1.1, Fonticons (FontAwesome-OFL.txt)
+.NET runtime ................... MIT, .NET Foundation
+Roslyn (Microsoft.CodeAnalysis)  MIT, Microsoft
+Silk.NET ....................... MIT, .NET Foundation and contributors
+ImGui.NET / Dear ImGui ......... MIT, Eric Mellino / Omar Cornut
+MonoMod.RuntimeDetour .......... MIT, 0x0ade and DaNike
+NVorbis ........................ MIT, Andrew Ward
+StbImageSharp .................. Public domain / MIT, StbSharp (https://github.com/StbSharp/StbImageSharp)
+NativeFileDialogNET ............ zlib, byte-0x74 (https://github.com/byte-0x74/NativeFiledialogNET)
+OpenAL Soft (native) ........... LGPL 2.0 or later, Chris Robinson (unmodified, loaded dynamically)
+SDL2 (native) .................. zlib, Sam Lantinga
+LibObjectFile .................. BSD 2-Clause, Alexandre Mutel
+RabbitizerSharp ................ MIT, flaffy (bindings to rabbitizer, MIT, Decompollaborate)
+
+None of these contain any part of King's Field III. The game is built on the
+player's own machine, from their own disc.

@@ -1,0 +1,818 @@
+{
+  "game": {
+    "id": "SLUS-00255",
+    "name": "KingsFieldIII",
+    "output": "../generated"
+  },
+  "cue": "../disc/KingsFieldIII.cue",
+  "funcMap": "funcmaps/main.json",
+  "linearSweep": true,
+  "overlays": [
+    {
+      "name": "end",
+      "funcMap": "funcmaps/end.json",
+      "base": "0x80011000",
+      "file": "END.EXE",
+      "skip": 2048,
+      "functions": [
+        {
+          "address": "80011D04"
+        }
+      ]
+    },
+    {
+      "name": "game",
+      "funcMap": "funcmaps/game.json",
+      "base": "0x80011000",
+      "file": "GAME.EXE",
+      "skip": 2048,
+      "functions": [
+        {
+          "address": "800144F8"
+        }
+      ]
+    },
+    {
+      "name": "open",
+      "funcMap": "funcmaps/open.json",
+      "base": "0x80011000",
+      "file": "OPEN.EXE",
+      "skip": 2048,
+      "functions": [
+        {
+          "address": "800136C8"
+        }
+      ]
+    },
+    {
+      "name": "fdat02",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 100352,
+      "skip": 0,
+      "size": 4096,
+      "funcMap": "funcmaps/fdat02.json"
+    },
+    {
+      "name": "fdat05",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 202752,
+      "skip": 0,
+      "size": 4096,
+      "funcMap": "funcmaps/fdat05.json"
+    },
+    {
+      "name": "fdat08",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 303104,
+      "skip": 0,
+      "size": 4096,
+      "funcMap": "funcmaps/fdat08.json"
+    },
+    {
+      "name": "fdat11",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 403456,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat11.json"
+    },
+    {
+      "name": "fdat14",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 503808,
+      "skip": 0,
+      "size": 4096,
+      "funcMap": "funcmaps/fdat14.json"
+    },
+    {
+      "name": "fdat17",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 604160,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat17.json"
+    },
+    {
+      "name": "fdat20",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 702464,
+      "skip": 0,
+      "size": 4096,
+      "funcMap": "funcmaps/fdat20.json"
+    },
+    {
+      "name": "fdat23",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 802816,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat23.json"
+    },
+    {
+      "name": "fdat26",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 901120,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat26.json"
+    },
+    {
+      "name": "fdat29",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1001472,
+      "skip": 0,
+      "size": 4096,
+      "funcMap": "funcmaps/fdat29.json"
+    },
+    {
+      "name": "fdat32",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1103872,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat32.json"
+    },
+    {
+      "name": "fdat35",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1202176,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat35.json"
+    },
+    {
+      "name": "fdat38",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1300480,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat38.json"
+    },
+    {
+      "name": "fdat41",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1402880,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat41.json"
+    },
+    {
+      "name": "fdat44",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1501184,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat44.json"
+    },
+    {
+      "name": "fdat47",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1599488,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat47.json"
+    },
+    {
+      "name": "fdat50",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1697792,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat50.json"
+    },
+    {
+      "name": "fdat53",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1796096,
+      "skip": 0,
+      "size": 4096,
+      "funcMap": "funcmaps/fdat53.json"
+    },
+    {
+      "name": "fdat56",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1896448,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat56.json"
+    },
+    {
+      "name": "fdat59",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 1994752,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat59.json"
+    },
+    {
+      "name": "fdat62",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 2093056,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat62.json"
+    },
+    {
+      "name": "fdat65",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 2189312,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat65.json"
+    },
+    {
+      "name": "fdat68",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 2287616,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat68.json"
+    },
+    {
+      "name": "fdat71",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 2385920,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat71.json"
+    },
+    {
+      "name": "fdat74",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 2484224,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat74.json"
+    },
+    {
+      "name": "fdat77",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 2580480,
+      "skip": 0,
+      "size": 4096,
+      "funcMap": "funcmaps/fdat77.json"
+    },
+    {
+      "name": "fdat80",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 2680832,
+      "skip": 0,
+      "size": 4096,
+      "funcMap": "funcmaps/fdat80.json"
+    },
+    {
+      "name": "fdat83",
+      "file": "CD/COM/FDAT.T",
+      "base": "0x801E8308",
+      "offset": 2779136,
+      "skip": 0,
+      "size": 2048,
+      "funcMap": "funcmaps/fdat83.json"
+    }
+  ],
+  "patches": [
+    {
+      "overlay": "open",
+      "address": "0x8001D018",
+      "target": "KfIII.SdkShims.CdRead",
+      "mode": "replace"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80063DF8",
+      "target": "KfIII.SdkShims.CdRead",
+      "mode": "replace"
+    },
+    {
+      "overlay": "end",
+      "address": "0x80019F60",
+      "target": "KfIII.SdkShims.CdRead",
+      "mode": "replace"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001A34C",
+      "target": "KfIII.Diag.ArchiveOpened",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001A154",
+      "target": "KfIII.Diag.EntryLoad",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80079DC8",
+      "target": "KfIII.VramDiag.LoadImage",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80079E2C",
+      "target": "KfIII.VramDiag.StoreImage",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80079D34",
+      "target": "KfIII.VramDiag.ClearImage",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80079E90",
+      "target": "KfIII.VramDiag.MoveImage",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8002F5C0",
+      "target": "KfIII.Controls.BeforeLook",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8002FE1C",
+      "target": "KfIII.Controls.BeforeActions",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8002FE1C",
+      "target": "KfIII.Controls.AfterActions",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80035394",
+      "target": "KfIII.Pools.AfterLayout",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x800422B8",
+      "target": "KfIII.Smooth.BeforeRender",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x800422B8",
+      "target": "KfIII.Smooth.AfterRender",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80043940",
+      "target": "KfIII.Smooth.BeforeTickSlots",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80019614",
+      "target": "KfIII.Smooth.Gate",
+      "mode": "replace"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80034BF4",
+      "target": "KfIII.WideCull.Before",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80034BF4",
+      "target": "KfIII.WideCull.After",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80074D88",
+      "target": "KfIII.WideCull.BeforeDivide",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80075188",
+      "target": "KfIII.WideCull.BeforeDivide",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x800756A8",
+      "target": "KfIII.WideCull.BeforeDivide",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80075B48",
+      "target": "KfIII.WideCull.BeforeDivide",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80039D50",
+      "target": "KfIII.Culling.Ground",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80039D50",
+      "target": "KfIII.Culling.Exit",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8003AB04",
+      "target": "KfIII.Culling.Ground",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8003AB04",
+      "target": "KfIII.Culling.Exit",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80035CA4",
+      "target": "KfIII.Culling.Model",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80035CA4",
+      "target": "KfIII.Culling.Exit",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80039428",
+      "target": "KfIII.Culling.Model2",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80039428",
+      "target": "KfIII.Culling.Exit",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80037BEC",
+      "target": "KfIII.Culling.Model3",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80037BEC",
+      "target": "KfIII.Culling.Exit",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8003DF50",
+      "target": "KfIII.Culling.Weapon",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8003E34C",
+      "target": "KfIII.ModelCallers.Before",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80035CA4",
+      "target": "KfIII.LightProbe.Before",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80025BE8",
+      "target": "KfIII.ItemViewProbe.Before",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8003DF50",
+      "target": "KfIII.Culling.Exit",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80035700",
+      "target": "KfIII.Mirror.BeforePresent",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x800351FC",
+      "target": "KfIII.Mirror.BeforeScroll",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80035630",
+      "target": "KfIII.Mirror.AfterBeginFrame",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80015410",
+      "target": "KfIII.PositionalAudio.BeforeSound",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001576C",
+      "target": "KfIII.PositionalAudio.BeforeFlat",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001576C",
+      "target": "KfIII.PositionalAudio.AfterFlat",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80015410",
+      "target": "KfIII.PositionalAudio.AfterSound",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8006DCE8",
+      "target": "KfIII.PositionalAudio.BeforeKeyOn",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8006DCE8",
+      "target": "KfIII.PositionalAudio.AfterKeyOn",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001CBB8",
+      "target": "KfIII.GearCompare.BeforeEquipList",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001CBB8",
+      "target": "KfIII.GearCompare.AfterEquipList",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80025BE8",
+      "target": "KfIII.GearCompare.BeforePreview",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80024C70",
+      "target": "KfIII.GearCompare.BeforePrompt",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80024C70",
+      "target": "KfIII.GearCompare.AfterPrompt",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x800270F8",
+      "target": "KfIII.GearCompare.BeforePresent",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80027198",
+      "target": "KfIII.KeyHints.AfterMenuEnter",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80027198",
+      "target": "KfIII.MenuMouse.AfterMenuEnter",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80027310",
+      "target": "KfIII.MenuMouse.AfterMenuLeave",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x800222FC",
+      "target": "KfIII.MenuMouse.BeforeListInput",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x800222FC",
+      "target": "KfIII.MenuMouse.AfterListInput",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x800252F4",
+      "target": "KfIII.MenuMouse.BeforeButtons",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x800221E8",
+      "target": "KfIII.MenuMouse.AfterButtonInput",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001A634",
+      "target": "KfIII.KeyHints.BeforePause",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001A634",
+      "target": "KfIII.KeyHints.AfterPause",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80027310",
+      "target": "KfIII.KeyHints.AfterMenuLeave",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80021298",
+      "target": "KfIII.GearCompare.BeforeShop",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80021298",
+      "target": "KfIII.GearCompare.AfterShop",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80021724",
+      "target": "KfIII.GearCompare.BeforeShop",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80021724",
+      "target": "KfIII.GearCompare.AfterShop",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8003E34C",
+      "target": "KfIII.Water.BeforeDrawModel",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8003E34C",
+      "target": "KfIII.Water.AfterDrawModel",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8005E2D0",
+      "target": "KfIII.AutoKey.BeforeInteract",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8005E2D0",
+      "target": "KfIII.AutoKey.AfterInteract",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80041EEC",
+      "target": "KfIII.AutoKey.BeforeMessage",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80045C7C",
+      "target": "KfIII.AutoKey.AfterFindProp",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8002ED60",
+      "target": "KfIII.Jump.BeforeVertical",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8002ED60",
+      "target": "KfIII.Jump.AfterVertical",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80061878",
+      "target": "KfIII.MovieSkip.EachFrame",
+      "mode": "pre"
+    },
+    {
+      "overlay": "end",
+      "address": "0x8001C08C",
+      "target": "KfIII.EndScreen.BeforePadStop",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80030FCC",
+      "target": "KfIII.SaveState.AtWorldUpdate",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80030FCC",
+      "target": "KfIII.Automap.BeforeWorldUpdate",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001A774",
+      "target": "KfIII.Automap.BeforeMenu",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8001A774",
+      "target": "KfIII.Automap.AfterMenu",
+      "mode": "post"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8003BB04",
+      "target": "KfIII.Automap.BeforeDrawTile",
+      "mode": "pre"
+    },
+    {
+      "overlay": "game",
+      "address": "0x8003BB04",
+      "target": "KfIII.Automap.AfterDrawTile",
+      "mode": "post"
+    },
+    {
+      "overlay": "open",
+      "address": "0x8001FE6C",
+      "target": "KfIII.SaveState.TitleVSync",
+      "mode": "pre"
+    },
+    {
+      "overlay": "main",
+      "address": "0x8001022C",
+      "target": "KfIII.SaveState.StubExec",
+      "mode": "replace"
+    },
+    {
+      "overlay": "game",
+      "address": "0x80046C00",
+      "target": "KfIII.SaveState.BeforeFade",
+      "mode": "pre"
+    }
+  ]
+}

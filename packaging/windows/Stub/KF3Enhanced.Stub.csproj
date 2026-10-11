@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    A few-KB .NET Framework executable at the root of the install that starts
+    bin\KF3Enhanced.exe. The self-contained release has to sit beside its hundred
+    DLLs, so they all go in bin\ and this is what shortcuts and Explorer see. It
+    targets net48, which every supported Windows already has, so it adds no second
+    runtime. Adapted from Verdite2's stub (MIT, Voicedrew11).
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AssemblyName>KF3Enhanced</AssemblyName>
+    <RootNamespace>KfIII.Stub</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ApplicationIcon>../../icon/kf3.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

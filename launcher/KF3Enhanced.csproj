@@ -1,0 +1,85 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <!--
+      The release executable. It builds without the disc: generated/ is a translation
+      of the game's code and can be neither committed nor shipped, so the launcher
+      carries the inputs to a build (config/ and the port's own C#) and makes the game
+      assembly on the player's machine, from their disc, the first time it runs.
+
+      KingsFieldIII.csproj stays the developer path (generated/ and patches/ compiled
+      by the SDK, incremental). Both compile the same sources; Build/GameCompile.cs
+      lists the options that have to agree between the two.
+
+      Adapted from Verdite2's launcher (MIT, Voicedrew11); see licenses/.
+    -->
+    <PropertyGroup>
+        <!-- WinExe: no console window behind the game. ConsoleAttach gives a terminal
+             launch its output back. -->
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <AssemblyName>KF3Enhanced</AssemblyName>
+        <RootNamespace>KfIII.Launcher</RootNamespace>
+
+        <!-- ../VERSION is the one place the version is written. -->
+        <Version>$([System.IO.File]::ReadAllText('$(MSBuildThisFileDirectory)../VERSION').Trim())</Version>
+
+        <!-- The runtime detours and Roslyn compile against loaded assemblies: no
+             trimming, and loose files rather than a single file. -->
+        <PublishTrimmed>false</PublishTrimmed>
+        <PublishSingleFile>false</PublishSingleFile>
+
+        <!-- The game runs in this process, so this runtimeconfig decides; it must
+             match KingsFieldIII.csproj (tier-up can lose a detour). -->
+        <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+
+        <!-- The recompiler is an Exe, referenced to be called in process
+             (Build/Recompile.cs); its apphost is never shipped or run. -->
+        <ValidateExecutableReferencesMatchSelfContained>false</ValidateExecutableReferencesMatchSelfContained>
+        <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+        <ApplicationIcon>../packaging/icon/kf3.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../tools/RecompOne/RecompOne.Runtime/RecompOne.Runtime.csproj" />
+        <ProjectReference Include="../tools/RecompOne/RecompOne.Recompiler/RecompOne.Recompiler.csproj" />
+        <!-- The one patch file the launcher needs before a game exists: the window's
+             defaults. It depends on nothing but the runtime. -->
+        <Compile Include="../patches/Core/PortDefaults.cs" Link="PortDefaults.cs" />
+    </ItemGroup>
+
+    <!--
+      The build payload, staged into content/ beside the executable. No disc data:
+        config/  addresses, names and sizes found in the game's code, and the SDK map
+        src/     the port's own C# (Program.cs and patches/), compiled at first run
+                 together with the recompiler's output
+    -->
+    <ItemGroup>
+        <Content Include="../config/**/*.json" LinkBase="content/config" CopyToOutputDirectory="PreserveNewest" />
+        <Content Include="../Program.cs" Link="content/src/Program.cs" CopyToOutputDirectory="PreserveNewest" />
+        <Content Include="../patches/**/*.cs" LinkBase="content/src/patches" CopyToOutputDirectory="PreserveNewest" />
+        <Content Include="../packaging/icon/kf3.png" Link="kf3.png" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="content/**;bin/**;obj/**" />
+    </ItemGroup>
+
+    <!-- The commit a build came from, for bug reports: 0.1.0+<sha>. -->
+    <Target Name="StampBuild" BeforeTargets="GetAssemblyAttributes">
+        <Exec Command="git -C &quot;$(MSBuildThisFileDirectory)..&quot; rev-parse --short=9 HEAD"
+              Condition="Exists('$(MSBuildThisFileDirectory)../.git')"
+              ConsoleToMSBuild="true" StandardOutputImportance="low"
+              ContinueOnError="true" IgnoreExitCode="true">
+            <Output TaskParameter="ConsoleOutput" PropertyName="GitSha" />
+        </Exec>
+        <PropertyGroup>
+            <BuildTag Condition="'$(GitSha)' != ''">$(GitSha.Trim())</BuildTag>
+            <BuildTag Condition="'$(BuildTag)' == ''">local</BuildTag>
+            <InformationalVersion>$(Version)+$(BuildTag)</InformationalVersion>
+        </PropertyGroup>
+    </Target>
+
+</Project>

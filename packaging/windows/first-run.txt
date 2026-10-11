@@ -1,0 +1,14 @@
+King's Field III Enhanced is a PC port of King's Field III, sold in North America as King's Field II (SLUS-00255).
+
+It does not include the game. You need your own disc image of the North American King's Field II, as a .bin with its .cue (or a .chd).
+
+The first time you start it:
+
+  1. It asks for your disc image. Pick the .cue file.
+  2. It builds the game from your disc. This takes about a minute and happens once (and again after an update).
+  3. The game starts.
+
+Your saves, settings and the built game are kept in %LOCALAPPDATA%\kf3-enhanced. Uninstalling does not remove them.
+
+Settings: press F1 in the game (Settings > Classic mode, Display, Quality of life, Map...).
+Quick save / load: F2 / F4.
